@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Engineering Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #F3F4F6 0%, #D1D8E0 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: #1E2A38;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        header nav a:hover {
+            background-color: #3498db;
+            transform: translateY(-3px);
+        }
+
+        /* Content Sections */
+        section {
+            padding: 90px 30px;
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Me Section */
+        #about-me p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 20px;
+            text-align: center;
+            color: #555;
+        }
+
+        /* Skills Section */
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .skills li {
+            background-color: #ecf0f1;
+            padding: 18px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .skills li:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Projects Section */
+        .project-card {
+            background-color: #ecf0f1;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        /* Education & Certifications Section */
+        #education ul, #certifications ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        #education li, #certifications li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Contact Section */
+        .contact-links li {
+            margin-bottom: 15px;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: #2c3e50;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #1E2A38;
+            color: white;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        footer:hover {
+            background-color: #34495e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .skills ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        #skill_Y{
+            color: white;
+        }
+        #work-experience_y{
+            position: relative;
+            top: -40px;
+            color: #D1D8E0;
+        }
+        #certifications_y{
+            color: white;
+        }
+        #education_y{
+            color:#D1D8E0 ;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <a href="#about-me">About Me</a>
+            <a href="#skill_Y">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education_y">Education</a>
+            <a href="#certifications_y">Certification</a>
+            <a href="#work-experience_y">Work Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I'm Vipin Vinod Shegaonkar, an enthusiastic Mechanical Engineer. My passion lies in designing and analyzing mechanical systems that optimize performance and efficiency. With a strong foundation in engineering principles, I specialize in areas such as thermodynamics, fluid mechanics, and mechanical design. I am currently exploring advanced topics like robotics, CAD modeling, and sustainable energy systems to create innovative and impactful solutions for the future.</p>
+        <!-- Profile Image -->
+        <img src="Passport photo.jpg" alt="profile image" class="profile-image" />
+        <div id="skill_Y">
+            your
+        </div>
+    </section>
+    
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>CAD Modeling (SolidWorks, AutoCAD)</li>
+            <li>Finite Element Analysis (FEA)</li>
+            <li>Mechanical Design</li>
+            <li>Thermodynamics</li>
+            <li>Fluid Mechanics</li>
+            <li>Manufacturing Processes</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <h3>Project 1: Robotics Arm Design</h3>
+            <p>This project involved designing and building a robotic arm using mechanical components and actuators. The arm was programmed to perform specific tasks in a controlled environment, incorporating sensors and a control system for precise movements.</p>
+            <img src="robot ar.jpeg" alt="Robotic Arm Design" />
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <h3>Project 2: Thermal System Analysis</h3>
+            <p>This project focused on the analysis of thermal systems, particularly heat exchangers. Using simulation software, I optimized the system for heat transfer efficiency and cost-effectiveness in industrial applications.</p>
+            
+            <img src="thermal.jpeg" alt="Thermal System Analysis" />
+            
+        </div>
+        
+    </section>
+    <div id="education_y">
+        y
+    </div>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>Bachelor of Mechanical Engineering, Government College of Engineering, Yavatmal, 2025</p>
+        <h3>Relevant Courses:</h3>
+        <ul>
+            <li>Fluid Mechanics</li>
+            <li>Thermodynamics</li>
+            <li>Manufacturing Processes</li>
+            <li>Mechanical Design</li>
+        </ul>
+        <div id="certifications_y">
+            x
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Certified SolidWorks Associate (CSWA)</li>
+            <li>Certified Autodesk AutoCAD Professional</li>
+            <li>ANSYS Certified Professional (FEA)</li>
+        </ul>
+        
+    </section>
+    <div id="work-experience_y">
+        y
+    </div>
+    <!-- Work Experience Section -->
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <h3>Intern - Mechanical Design</h3>
+        <p>XYZ Engineering, Jan 2024 - Present</p>
+        <ul>
+            <li>Designed and tested mechanical systems using CAD software like SolidWorks.</li>
+            <li>Performed Finite Element Analysis (FEA) to assess stress, strain, and heat distribution in mechanical components.</li>
+            <li>Worked on optimizing mechanical systems for performance, cost, and manufacturability.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-links">
+            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vipin Vinod Shegaonkar - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
